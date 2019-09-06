@@ -17,6 +17,8 @@ const basicObject = {
 var copy = Object.assign({}, basicObject);
 
 
+// @ts-ignore
+undefinedFunctionCall();
 
 export default async function app() {
     return new Promise((resolve) => {
@@ -25,3 +27,4 @@ export default async function app() {
         }, 1000);
     });
 }
+

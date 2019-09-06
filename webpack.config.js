@@ -1,6 +1,7 @@
 const Encore = require('@symfony/webpack-encore');
 const SentryWebpackPlugin = require('@sentry/webpack-plugin');
-//
+
+
 Encore.addPlugin(
     new SentryWebpackPlugin({
         include: './build/',
@@ -70,8 +71,6 @@ Encore.enableSourceMaps(true);
 const config = Encore.getWebpackConfig();
 
 
-if (Encore.isProduction()) {
-    config.devtool = 'source-map';
-}
+config.devtool = 'source-map';
 
 module.exports = config;
