@@ -57,8 +57,6 @@ Encore.configureBabel(
 
 Encore.splitEntryChunks()
     .addEntry('app', './js/app.ts')
-    .enableVersioning(Encore.isProduction())
-    .enableIntegrityHashes(Encore.isProduction())
     .enableSingleRuntimeChunk()
     .configureSplitChunks(() => ({
         name: 'vendor_app',
